@@ -132,8 +132,14 @@ a{
 .sitenav__link {
   font-size: 14px;
   line-height: 16px;
+  padding-bottom: 28px;
   letter-spacing: -0.107692px;
   color: var(--main-text-color);
+  border-bottom: 1px solid transparent;
+}
+.sitenav__link:hover{
+  border-bottom: 4px solid #33D35E;
+
 }
 .site-link {
   display: inline-block;
@@ -145,11 +151,14 @@ a{
   background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
   border-radius: 22px;
 }
-
+.site-link:hover{
+  opacity: 0.4;
+}
 /* hero section start */
 .hero {
   position: relative;
   padding: 453px 0 441px 0;
+  background-color: #F2F2F2;
   background-image: url(../image/phone.svg);
   background-repeat: no-repeat;
   background-position: calc(50% + 604px) calc(50% - 86px);
