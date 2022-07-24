@@ -1,11 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root{
   --main-bg-color : #fff;
   --main-text-color : #9597A5;
-  /* --main-font-size : 16px; */
-  /* --main-font-weight : 400; */
-  /* --main-line-height : 1.5; */
 }
 
 /* GENERAL */
@@ -13,13 +17,15 @@
 *,
 *::before,
 *::after{
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 
 html{
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img{
@@ -55,8 +61,13 @@ img{
 }
 
 body{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -84,7 +95,8 @@ a{
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -102,9 +114,12 @@ a{
 /* STICKY-FOOTER */
 
 .site-main{
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
+/* header start */
 .site-header {
   position: fixed;
   z-index: 112;
@@ -116,11 +131,19 @@ a{
   
 }
 .site-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .sitenav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .sitenav__item {
@@ -148,6 +171,7 @@ a{
   line-height: 28px;
   color: var(--main-bg-color);  
   padding: 8px 36px 8px 33px;
+  background: -o-linear-gradient(315deg, #33D35E 0%, #2AB6D9 99.58%);
   background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
   border-radius: 22px;
 }
